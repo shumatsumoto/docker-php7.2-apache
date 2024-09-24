@@ -1,0 +1,1 @@
+version: "3"services:  web:    image: php:7.2-apache    ports:      - 38080:80    volumes:      - ./src:/var/www/html      - ./php.ini:/usr/local/etc/php/php.ini      - ./apache2.conf:/etc/apache2/apache2.conf      - ./000-default.conf:/etc/apache2/sites-available/000-default.conf    working_dir: /var/www/html
